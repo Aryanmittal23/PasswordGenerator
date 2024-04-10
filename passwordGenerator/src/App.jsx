@@ -1,6 +1,6 @@
 import { useState,useCallback ,useEffect,useRef } from 'react'
-import { createDocumentRegistry } from 'typescript';
 
+import './index.css'
 function App() {
   const [length, setLength] = useState(8)
   const [numberAllowed,setNumberAllowed]=useState
@@ -43,8 +43,7 @@ const copyPasswordToClipboard = useCallback(()=>{
   return (
   
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3
-      my-8 bg-gray-800 text-orange-500">
+      <div className="card">
         <h1 className='text-white text-center my-8'>
           Password Generator</h1>
         <div className="flex shadow
@@ -52,7 +51,7 @@ const copyPasswordToClipboard = useCallback(()=>{
           <input
            type="text"
           value={password}
-          className='outline-none w-full py-1 px-3'
+          className='outline-none w-full py-1 px-3 '
           placeholder='password'
           readOnly
           ref={passwordRef}
